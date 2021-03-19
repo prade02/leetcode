@@ -55,9 +55,9 @@ x = ["rag","orr","err","bad","foe","ivy","tho","gem","len","cat","ron","ump","ne
 import time
 start = time.perf_counter()
 # print(group())
-# print(group_v1(y))
+print(len(group_v1(y)))
 # group_v1(y)
 # group_v1(y)
-group(y)
+len(group(y))
 end = time.perf_counter()
 print(end - start)
