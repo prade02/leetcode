@@ -1,4 +1,5 @@
 """
+approach 1: with out dict. compare 2 elements at a time with i fixed and j from i+1 to entire array
 create a return list
 create a skip list -> when iterating skip this element as it is already an anagram to another item and the same is checked against all 
 loop through the array.
@@ -8,6 +9,13 @@ if yes:
     add to the list
     add to the skip list
 if all elements are processed for ith, then add the list to return list
+
+Approach 2: hashmap or using dict
+iterate through the list
+no compariosion
+get the char in the ith element sort, convert to tuple and in dict: tuple -> [i]
+    if the subsequent elements has the same tuple - meaning they are Anagrams, will be added in same dict key appended to list
+return dict values as list 
 """
 
 def group(strs):
