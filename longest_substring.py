@@ -16,7 +16,7 @@ def longest(s):
         l.append(char)
     if len(l) > 0:
         ss = ''.join(l)
-        u[len(ss)] = (ss)
+        u[len(ss)] = ss
         l.clear()
     return 0 if len(u) == 0 else max(u)
 
