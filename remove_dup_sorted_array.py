@@ -13,6 +13,8 @@ Approach 4: same as #3 but we are going to change list elements. if l = [1,2,2,3
 which unique elements are calculated.
     i and j as 0, iterate the list, if i and i+1 are diff then increment j, in l[j] put the i+1 item, when items are same, dont do anything. so for same items
     j will not increment, once a diff item is found in i, increment j put that element in the j i.e., l[j] = l[i]
+
+Approach 5: its a cheat way - create a set by inputting the list in the constructor.
 """
 
 def remove_duplicates(nums):    
@@ -50,5 +52,10 @@ def remove_duplicates_v4(nums):
             j += 1
     return j
 
-x = [1,2,2,3,3,4,5,7,7,9,9]
-print(remove_duplicates_v3(x))
+
+def remove_duplicates_v5(nums):    
+    s = set(nums)
+    return len(s)
+
+x = [1,2,2,3,3,4,5,7,7,]
+print(remove_duplicates_v5(x))
