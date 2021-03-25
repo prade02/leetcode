@@ -22,18 +22,15 @@ def rotate_v1(nums, k):
 
 
 def rotate_v2(nums, k):
-    if len(nums) == k:
-        return
+    _len = len(nums)
+    if k >= _len:
+        k = k % _len
+        if k == 0:
+            return
     for i in range(k):
-        x = None
-        y = nums[-1]
-        for j in range(len(nums) - 1):
-            if x == None:
-                x = nums[j + 1]
-                nums[j + 1] = nums[j]
-            else:
-                nums[j + 1], x = x, nums[j + 1]
-        nums[0] = y
+        x = nums[-1]
+        for j in range(_len):
+            nums[j], x = x, nums[j]
     return
 
 # did not work
@@ -65,11 +62,8 @@ def rotate_v3(nums, k):
     return
 
 
-# x = [1,2,3,4,5,6,7]
-
-
 x = [1,2,3,4,5,6]
-k = 3
-rotate_v1(x, k)
+k = 2
+rotate_v2(x, k)
 print(x)
 
