@@ -32,7 +32,7 @@ def mergeTwoLists(l1, l2):
         while l1:
             if l2.val < l1.val:
                 temp = l2.next
-                l1.val,l2.val,l1.next,l2.next = l2.val,l1.val,l2,l1.next
+                l1.val,l2.val,l1.next,l2.next,l1 = l2.val,l1.val,l2,l1.next,l2
                 l2 = temp
                 break
             elif l1.next is None:
@@ -43,8 +43,8 @@ def mergeTwoLists(l1, l2):
     return head_1
 
 
-x = []
-y = []
+x = [1,2,4]
+y = [1,3,4]
 x = create_linkedlist(x)
 y = create_linkedlist(y)
 head = mergeTwoLists(x,y)
