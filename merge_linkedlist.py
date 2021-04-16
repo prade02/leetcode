@@ -1,5 +1,6 @@
 """
 Approach 1: given 2 sorted linked list merge a sorted list. list 1 and list 2. pick an node from list 2 and insert at appropriate location in list 1
+it is kind of insertion sort.
 """
 
 class ListNode:
